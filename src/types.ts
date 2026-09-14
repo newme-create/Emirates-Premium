@@ -75,6 +75,17 @@ export interface PricingPlan {
   imageGradient: string;
 }
 
+export interface MaritimePricingCategory {
+  id: string;
+  category: string;
+  tariff: string;
+  pricePerCbm: number | null;
+  examples: string;
+  badge?: string;
+  badgeColor?: string;
+  iconName?: string;
+}
+
 export interface Agency {
   id: string;
   city: string;

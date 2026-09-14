@@ -27,15 +27,21 @@ export const DevisModal: React.FC<DevisModalProps> = ({
   let estimatedPriceStr = '';
 
   if (service === 'air_super') {
-    estimatedPriceStr = `${(parsedWeight * 15000).toLocaleString('fr-FR')} XAF`;
+    estimatedPriceStr = `${(parsedWeight * 15000).toLocaleString('fr-FR')} FCFA`;
   } else if (service === 'air_express') {
-    estimatedPriceStr = `${(parsedWeight * 12000).toLocaleString('fr-FR')} XAF`;
+    estimatedPriceStr = `${(parsedWeight * 12000).toLocaleString('fr-FR')} FCFA`;
   } else if (service === 'air_standard') {
-    estimatedPriceStr = `${(parsedWeight * 8500).toLocaleString('fr-FR')} XAF`;
-  } else if (service === 'sea_groupage') {
-    estimatedPriceStr = `${(parsedWeight * 380000).toLocaleString('fr-FR')} XAF (estimé au CBM)`;
+    estimatedPriceStr = `${(parsedWeight * 8500).toLocaleString('fr-FR')} FCFA`;
+  } else if (service === 'sea_ordinary') {
+    estimatedPriceStr = `${(parsedWeight * 330000).toLocaleString('fr-FR')} FCFA (${parsedWeight} CBM)`;
+  } else if (service === 'sea_heavy') {
+    estimatedPriceStr = `${(parsedWeight * 360000).toLocaleString('fr-FR')} FCFA (${parsedWeight} CBM)`;
+  } else if (service === 'sea_machines') {
+    estimatedPriceStr = `${(parsedWeight * 380000).toLocaleString('fr-FR')} FCFA (${parsedWeight} CBM)`;
+  } else if (service === 'sea_special') {
+    estimatedPriceStr = 'Sur devis personnalisé (Batteries & Spéciaux)';
   } else if (service === 'auto') {
-    estimatedPriceStr = 'À partir de 1 850 000 XAF (selon modèle & taxes)';
+    estimatedPriceStr = 'À partir de 1 850 000 FCFA (selon modèle & taxes)';
   } else {
     estimatedPriceStr = 'Sur mesure après analyse';
   }
@@ -134,12 +140,21 @@ export const DevisModal: React.FC<DevisModalProps> = ({
                 onChange={(e) => setService(e.target.value)}
                 className="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:outline-hidden bg-slate-50 focus:bg-white"
               >
-                <option value="air_super">Fret Aérien Super Express (24h) - 15 000 XAF/kg</option>
-                <option value="air_express">Fret Aérien Express (48-72h) - 12 000 XAF/kg</option>
-                <option value="air_standard">Fret Aérien Standard (7-14j) - 8 500 XAF/kg</option>
-                <option value="sea_groupage">Fret Maritime Groupage (CBM) - 380 000 XAF/CBM</option>
-                <option value="sourcing">Sourcing & Achats Fournisseurs Chine</option>
-                <option value="auto">Automobile & Engins Industriels</option>
+                <optgroup label="Fret Aérien (Chine ➔ Cameroun)">
+                  <option value="air_super">Fret Aérien Super Express (24h) - 15 000 FCFA/kg</option>
+                  <option value="air_express">Fret Aérien Express (48-72h) - 12 000 FCFA/kg</option>
+                  <option value="air_standard">Fret Aérien Standard (7-14j) - 8 500 FCFA/kg</option>
+                </optgroup>
+                <optgroup label="Fret Maritime Groupage CBM (Port de Douala)">
+                  <option value="sea_ordinary">Maritime - Marchandises ordinaires : 330 000 FCFA/CBM</option>
+                  <option value="sea_heavy">Maritime - Marchandises lourdes : 360 000 FCFA/CBM</option>
+                  <option value="sea_machines">Maritime - Machines & BTP : 380 000 FCFA/CBM</option>
+                  <option value="sea_special">Maritime - Batteries & produits spéciaux : Sur devis</option>
+                </optgroup>
+                <optgroup label="Autres Services">
+                  <option value="sourcing">Sourcing & Achats Fournisseurs Chine</option>
+                  <option value="auto">Automobile & Engins Industriels</option>
+                </optgroup>
               </select>
             </div>
 
@@ -166,17 +181,27 @@ export const DevisModal: React.FC<DevisModalProps> = ({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-xs font-bold text-slate-700 mb-1">
-                Poids (kg) ou Volume (CBM)
+                {service.startsWith('sea_') ? 'Volume estimé en CBM (m³)' : 'Poids estimé (kg)'} <span className="text-red-500">*</span>
               </label>
-              <input
-                type="number"
-                min="1"
-                step="0.1"
-                value={weight}
-                onChange={(e) => setWeight(e.target.value)}
-                placeholder="Ex: 15"
-                className="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:outline-hidden bg-slate-50 focus:bg-white"
-              />
+              <div className="relative">
+                <input
+                  type="number"
+                  min="0.1"
+                  step="0.1"
+                  value={weight}
+                  onChange={(e) => setWeight(e.target.value)}
+                  placeholder={service.startsWith('sea_') ? "Ex: 2.5 (CBM)" : "Ex: 15 (kg)"}
+                  className="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:outline-hidden bg-slate-50 focus:bg-white"
+                />
+                <span className="absolute right-3 top-2.5 text-xs font-bold text-slate-400">
+                  {service.startsWith('sea_') ? 'CBM' : 'kg'}
+                </span>
+              </div>
+              <p className="text-[11px] text-slate-500 mt-1">
+                {service.startsWith('sea_') 
+                  ? '1 CBM = 1 mètre cube (1m x 1m x 1m). Minimum 0.5 CBM.' 
+                  : 'Tarif calculé au kilogramme net ou volumétrique.'}
+              </p>
             </div>
 
             <div>

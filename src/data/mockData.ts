@@ -1,4 +1,4 @@
-import { Shipment, ServiceItem, PricingPlan, Agency, ConfirmedDelivery } from '../types';
+import { Shipment, ServiceItem, PricingPlan, MaritimePricingCategory, Agency, ConfirmedDelivery } from '../types';
 
 export const MOCK_SHIPMENTS: Record<string, Shipment> = {
   'EP2505CN23789': {
@@ -286,6 +286,49 @@ export const PRICING_AIR_PLANS: PricingPlan[] = [
       'Contrôle qualité strict au départ de Guangzhou'
     ],
     imageGradient: 'from-emerald-500/20 to-slate-900/40'
+  }
+];
+
+export const PRICING_MARITIME_CATEGORIES: MaritimePricingCategory[] = [
+  {
+    id: 'ordinaires',
+    category: 'Marchandises ordinaires',
+    tariff: '330 000 FCFA / CBM',
+    pricePerCbm: 330000,
+    examples: 'Vêtements, chaussures, articles ménagers, colis divers',
+    badge: 'Standard & Économique',
+    badgeColor: 'bg-emerald-50 text-emerald-800 border border-emerald-200',
+    iconName: 'Package'
+  },
+  {
+    id: 'lourdes',
+    category: 'Marchandises lourdes',
+    tariff: '360 000 FCFA / CBM',
+    pricePerCbm: 360000,
+    examples: 'Matériaux de construction, pièces métalliques, équipements industriels',
+    badge: 'Haute Densité',
+    badgeColor: 'bg-blue-50 text-blue-800 border border-blue-200',
+    iconName: 'Boxes'
+  },
+  {
+    id: 'machines',
+    category: 'Machines',
+    tariff: '380 000 FCFA / CBM',
+    pricePerCbm: 380000,
+    examples: 'Machines industrielles, équipements BTP, groupes électrogènes',
+    badge: 'Industriel & BTP',
+    badgeColor: 'bg-amber-50 text-amber-900 border border-amber-200',
+    iconName: 'Wrench'
+  },
+  {
+    id: 'batteries-speciaux',
+    category: 'Batteries & produits spéciaux',
+    tariff: 'Sur devis',
+    pricePerCbm: null,
+    examples: 'Batteries lithium/plomb, produits chimiques, marchandises sensibles',
+    badge: 'Matières sensibles (DG / IMO)',
+    badgeColor: 'bg-purple-50 text-purple-800 border border-purple-200',
+    iconName: 'Zap'
   }
 ];
 
