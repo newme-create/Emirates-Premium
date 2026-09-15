@@ -35,15 +35,15 @@ export const ServicesView: React.FC<ServicesViewProps> = ({ onOpenDevis, setActi
 
   const getServiceImage = (id: string) => {
     switch (id) {
-      case 'fret-aerien': return '/assets/air-cargo.jpg';
-      case 'fret-maritime': return '/assets/container-ship.jpg';
-      case 'sourcing': return '/assets/guangzhou-hub.jpg';
-      case 'automobile': return '/assets/hero-cargo.jpg';
-      case 'trucks': return '/assets/douala-port.jpg';
-      case 'emballage': return '/assets/guangzhou-hub.jpg';
-      case 'porte-a-porte': return '/assets/delivery-courier.jpg';
-      case 'consulting': return '/assets/yaounde-city.jpg';
-      default: return '/assets/hero-cargo.jpg';
+      case 'fret-aerien': return './assets/air-cargo.jpg';
+      case 'fret-maritime': return './assets/container-ship.jpg';
+      case 'sourcing': return './assets/guangzhou-hub.jpg';
+      case 'automobile': return './assets/hero-cargo.jpg';
+      case 'trucks': return './assets/douala-port.jpg';
+      case 'emballage': return './assets/guangzhou-hub.jpg';
+      case 'porte-a-porte': return './assets/delivery-courier.jpg';
+      case 'consulting': return './assets/yaounde-city.jpg';
+      default: return './assets/hero-cargo.jpg';
     }
   };
 
@@ -55,7 +55,7 @@ export const ServicesView: React.FC<ServicesViewProps> = ({ onOpenDevis, setActi
         {/* Background Image */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img 
-            src="/assets/hero-cargo.jpg" 
+            src="./assets/hero-cargo.jpg" 
             alt="Services logistiques Emirates Premium" 
             className="w-full h-full object-cover object-center opacity-30 filter brightness-90 contrast-125"
             referrerPolicy="no-referrer"

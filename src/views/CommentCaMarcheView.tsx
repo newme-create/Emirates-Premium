@@ -29,12 +29,12 @@ export const CommentCaMarcheView: React.FC<CommentCaMarcheViewProps> = ({
 
   const getStepImage = (num: string) => {
     switch (num) {
-      case '01': return '/assets/guangzhou-hub.jpg';
-      case '02': return '/assets/guangzhou-hub.jpg';
-      case '03': return '/assets/air-cargo.jpg';
-      case '04': return '/assets/douala-port.jpg';
-      case '05': return '/assets/delivery-courier.jpg';
-      default: return '/assets/hero-cargo.jpg';
+      case '01': return './assets/guangzhou-hub.jpg';
+      case '02': return './assets/guangzhou-hub.jpg';
+      case '03': return './assets/air-cargo.jpg';
+      case '04': return './assets/douala-port.jpg';
+      case '05': return './assets/delivery-courier.jpg';
+      default: return './assets/hero-cargo.jpg';
     }
   };
 
@@ -46,7 +46,7 @@ export const CommentCaMarcheView: React.FC<CommentCaMarcheViewProps> = ({
         {/* Background Image */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img 
-            src="/assets/hero-cargo.jpg" 
+            src="./assets/hero-cargo.jpg" 
             alt="Processus logistique Emirates Premium" 
             className="w-full h-full object-cover object-center opacity-30 filter brightness-90 contrast-125"
             referrerPolicy="no-referrer"

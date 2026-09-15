@@ -36,7 +36,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
         {/* Multimodal Cargo Background Image - enhanced visibility */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <img 
-            src="/assets/hero-cargo.jpg" 
+            src="./assets/hero-cargo.jpg" 
             alt="Transport de Marchandises Chine Cameroun - Avion Cargo et Porte-Conteneurs" 
             className="w-full h-full object-cover object-center opacity-40 filter brightness-100 contrast-110"
             referrerPolicy="no-referrer"
@@ -142,7 +142,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               {/* Highlighted Multimodal Transport Image (100% visible & sharp) */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/40 group bg-slate-900">
                 <img 
-                  src="/assets/hero-cargo.jpg" 
+                  src="./assets/hero-cargo.jpg" 
                   alt="Transport de Marchandise - Avion Cargo, Porte-Conteneurs et Camion Fret" 
                   className="w-full h-56 sm:h-64 object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   referrerPolicy="no-referrer"
@@ -336,12 +336,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {SERVICES_DATA.slice(0, 4).map((service) => {
               const serviceImg = service.id === 'fret-aerien'
-                ? '/assets/air-cargo.jpg'
+                ? './assets/air-cargo.jpg'
                 : service.id === 'fret-maritime'
-                ? '/assets/container-ship.jpg'
+                ? './assets/container-ship.jpg'
                 : service.id === 'sourcing'
-                ? '/assets/guangzhou-hub.jpg'
-                : '/assets/delivery-courier.jpg';
+                ? './assets/guangzhou-hub.jpg'
+                : './assets/delivery-courier.jpg';
 
               return (
                 <div
@@ -623,7 +623,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl transition-shadow flex flex-col justify-between group">
               <div className="relative h-64 overflow-hidden bg-slate-900">
                 <img 
-                  src="/assets/guangzhou-hub.jpg" 
+                  src="./assets/guangzhou-hub.jpg" 
                   alt="Hub Guangzhou Emirates Premium"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
@@ -667,7 +667,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl transition-shadow flex flex-col justify-between group">
               <div className="relative h-64 overflow-hidden bg-slate-900">
                 <img 
-                  src="/assets/delivery-courier.jpg" 
+                  src="./assets/delivery-courier.jpg" 
                   alt="Agences Cameroun Emirates Premium"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"

@@ -38,7 +38,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ setActiveTab, onSubmit
         {/* Background Image */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img 
-            src="/assets/hero-cargo.jpg" 
+            src="./assets/hero-cargo.jpg" 
             alt="Contact Emirates Premium" 
             className="w-full h-full object-cover object-center opacity-30 filter brightness-90 contrast-125"
             referrerPolicy="no-referrer"
@@ -189,7 +189,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ setActiveTab, onSubmit
               <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
                 <div className="h-32 w-full relative overflow-hidden bg-slate-900">
                   <img 
-                    src="/assets/guangzhou-hub.jpg" 
+                    src="./assets/guangzhou-hub.jpg" 
                     alt="Hub Guangzhou" 
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
@@ -216,7 +216,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ setActiveTab, onSubmit
                       className="px-3 py-1.5 bg-emerald-50 text-emerald-800 rounded-lg font-bold flex items-center gap-2 hover:bg-emerald-100 text-xs w-fit"
                     >
                       <img 
-                        src="/assets/whatsapp-logo.webp" 
+                        src="./assets/whatsapp-logo.webp" 
                         alt="WhatsApp" 
                         className="w-4 h-4 rounded-full object-cover shrink-0" 
                         referrerPolicy="no-referrer"
@@ -231,7 +231,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ setActiveTab, onSubmit
               <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
                 <div className="h-32 w-full relative overflow-hidden bg-slate-900">
                   <img 
-                    src="/assets/yaounde-city.jpg" 
+                    src="./assets/yaounde-city.jpg" 
                     alt="Agence Yaoundé" 
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
@@ -267,7 +267,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ setActiveTab, onSubmit
               <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
                 <div className="h-32 w-full relative overflow-hidden bg-slate-900">
                   <img 
-                    src="/assets/douala-port.jpg" 
+                    src="./assets/douala-port.jpg" 
                     alt="Agence Douala" 
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"

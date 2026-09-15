@@ -29,7 +29,7 @@ export const TarifsView: React.FC<TarifsViewProps> = ({ onOpenDevis, setActiveTa
         {/* Background Image */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img 
-            src="/assets/hero-cargo.jpg" 
+            src="./assets/hero-cargo.jpg" 
             alt="Tarifs Emirates Premium" 
             className="w-full h-full object-cover object-center opacity-30 filter brightness-90 contrast-125"
             referrerPolicy="no-referrer"
@@ -134,7 +134,7 @@ export const TarifsView: React.FC<TarifsViewProps> = ({ onOpenDevis, setActiveTa
                 {/* Visual Image Header */}
                 <div className="h-28 w-full relative overflow-hidden bg-slate-900">
                   <img 
-                    src="/assets/air-cargo.jpg" 
+                    src="./assets/air-cargo.jpg" 
                     alt={plan.name}
                     className="w-full h-full object-cover object-center filter brightness-90"
                     referrerPolicy="no-referrer"
@@ -590,7 +590,7 @@ export const TarifsView: React.FC<TarifsViewProps> = ({ onOpenDevis, setActiveTa
                 className="w-full py-2.5 bg-[#112340] hover:bg-[#18315b] text-white font-bold text-xs rounded-xl flex items-center justify-center gap-2.5 shadow-xs transition-colors border border-slate-300"
               >
                 <img 
-                  src="/assets/whatsapp-logo.webp" 
+                  src="./assets/whatsapp-logo.webp" 
                   alt="WhatsApp" 
                   className="w-4 h-4 rounded-full object-cover shrink-0"
                   referrerPolicy="no-referrer"

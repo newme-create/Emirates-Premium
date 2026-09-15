@@ -17,7 +17,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({
       {/* Background cargo transport image with navy overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/assets/hero-cargo.jpg" 
+          src="./assets/hero-cargo.jpg" 
           alt="Transport de Marchandise Emirates Premium" 
           className="w-full h-full object-cover object-center opacity-25 filter brightness-75 contrast-125"
           referrerPolicy="no-referrer"
@@ -57,7 +57,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({
               className="px-5 py-3 rounded-xl bg-[#112340] hover:bg-[#18315b] border border-white/20 text-white font-bold text-sm sm:text-base flex items-center gap-3 transition-all shadow-md hover:scale-102 cursor-pointer"
             >
               <img 
-                src="/assets/whatsapp-logo.webp" 
+                src="./assets/whatsapp-logo.webp" 
                 alt="Logo WhatsApp" 
                 className="w-6 h-6 rounded-full object-cover shrink-0"
                 referrerPolicy="no-referrer"

@@ -67,7 +67,7 @@ export const SuiviView: React.FC<SuiviViewProps> = ({
         {/* Background Image */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img 
-            src="/assets/hero-cargo.jpg" 
+            src="./assets/hero-cargo.jpg" 
             alt="Suivi de colis Emirates Premium"
             className="w-full h-full object-cover object-center opacity-30 filter brightness-90 contrast-125"
             referrerPolicy="no-referrer"
@@ -328,7 +328,7 @@ export const SuiviView: React.FC<SuiviViewProps> = ({
               <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-xs space-y-4">
                 <div className="flex items-center gap-3">
                   <img 
-                    src="/assets/whatsapp-logo.webp" 
+                    src="./assets/whatsapp-logo.webp" 
                     alt="WhatsApp" 
                     className="w-10 h-10 rounded-full object-cover shrink-0"
                     referrerPolicy="no-referrer"
@@ -352,7 +352,7 @@ export const SuiviView: React.FC<SuiviViewProps> = ({
                   className="w-full py-3 bg-[#112340] hover:bg-[#18315b] text-white font-bold text-xs rounded-xl flex items-center justify-center gap-2.5 shadow-xs transition-colors border border-slate-200"
                 >
                   <img 
-                    src="/assets/whatsapp-logo.webp" 
+                    src="./assets/whatsapp-logo.webp" 
                     alt="Logo WhatsApp" 
                     className="w-5 h-5 rounded-full object-cover shrink-0"
                     referrerPolicy="no-referrer"

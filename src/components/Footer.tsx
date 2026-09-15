@@ -60,7 +60,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
                 className="text-amber-400 font-bold hover:underline flex items-center gap-1.5"
               >
                 <img 
-                  src="/assets/whatsapp-logo.webp" 
+                  src="./assets/whatsapp-logo.webp" 
                   alt="WhatsApp" 
                   className="w-3.5 h-3.5 rounded-full object-cover shrink-0" 
                   referrerPolicy="no-referrer"

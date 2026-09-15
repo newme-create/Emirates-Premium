@@ -26,7 +26,7 @@ export const FloatingWhatsApp: React.FC = () => {
       >
         <span className="absolute inset-0 rounded-full bg-emerald-400 opacity-60 animate-ping pointer-events-none"></span>
         <img 
-          src="/assets/whatsapp-logo.webp" 
+          src="./assets/whatsapp-logo.webp" 
           alt="WhatsApp Emirates Premium" 
           className="w-14 h-14 rounded-full object-cover relative z-10 border-2 border-white shadow-md"
           referrerPolicy="no-referrer"

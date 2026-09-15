@@ -222,7 +222,7 @@ export const TrackingModal: React.FC<TrackingModalProps> = ({
             className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#112340] hover:bg-[#18315b] text-white text-xs font-bold transition-colors shadow-xs border border-slate-700"
           >
             <img 
-              src="/assets/whatsapp-logo.webp" 
+              src="./assets/whatsapp-logo.webp" 
               alt="WhatsApp" 
               className="w-4 h-4 rounded-full object-cover shrink-0" 
               referrerPolicy="no-referrer"

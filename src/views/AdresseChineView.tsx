@@ -40,7 +40,7 @@ Postcode / 邮编: 510440`;
         {/* Background Image */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img 
-            src="/assets/hero-cargo.jpg" 
+            src="./assets/hero-cargo.jpg" 
             alt="Hub Chine Emirates Premium" 
             className="w-full h-full object-cover object-center opacity-30 filter brightness-90 contrast-125"
             referrerPolicy="no-referrer"
@@ -89,7 +89,7 @@ Postcode / 邮编: 510440`;
               <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
                 <div className="h-48 w-full relative overflow-hidden bg-slate-900">
                   <img 
-                    src="/assets/guangzhou-hub.jpg" 
+                    src="./assets/guangzhou-hub.jpg" 
                     alt="Entrepôt Guangzhou Emirates Premium" 
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
@@ -254,7 +254,7 @@ Postcode / 邮编: 510440`;
                 <div className="flex items-center gap-3">
                   <div className="w-11 h-11 rounded-xl bg-white/10 p-1 flex items-center justify-center">
                     <img 
-                      src="/assets/whatsapp-logo.webp" 
+                      src="./assets/whatsapp-logo.webp" 
                       alt="WhatsApp" 
                       className="w-full h-full object-cover rounded-lg"
                       referrerPolicy="no-referrer"
@@ -282,7 +282,7 @@ Postcode / 邮编: 510440`;
                   className="w-full py-3 bg-[#112340] hover:bg-[#18315b] text-white font-bold text-xs rounded-xl flex items-center justify-center gap-2.5 shadow-xs transition-colors border border-slate-600"
                 >
                   <img 
-                    src="/assets/whatsapp-logo.webp" 
+                    src="./assets/whatsapp-logo.webp" 
                     alt="WhatsApp" 
                     className="w-4 h-4 rounded-full object-cover shrink-0"
                     referrerPolicy="no-referrer"

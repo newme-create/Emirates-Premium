@@ -15,9 +15,9 @@ interface AgencesViewProps {
 export const AgencesView: React.FC<AgencesViewProps> = ({ setActiveTab, onOpenDevis }) => {
   const getAgencyImage = (city: string) => {
     if (city.toLowerCase().includes('yaoundé') || city.toLowerCase().includes('yaounde')) {
-      return '/assets/yaounde-city.jpg';
+      return './assets/yaounde-city.jpg';
     }
-    return '/assets/douala-port.jpg';
+    return './assets/douala-port.jpg';
   };
 
   return (
@@ -28,7 +28,7 @@ export const AgencesView: React.FC<AgencesViewProps> = ({ setActiveTab, onOpenDe
         {/* Background Image */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img 
-            src="/assets/hero-cargo.jpg" 
+            src="./assets/hero-cargo.jpg" 
             alt="Agences Emirates Premium Cameroun" 
             className="w-full h-full object-cover object-center opacity-30 filter brightness-90 contrast-125"
             referrerPolicy="no-referrer"
@@ -183,7 +183,7 @@ export const AgencesView: React.FC<AgencesViewProps> = ({ setActiveTab, onOpenDe
                     className="flex-1 py-2.5 bg-[#112340] hover:bg-[#18315b] text-white font-bold text-xs rounded-xl flex items-center justify-center gap-2 transition-colors border border-slate-300"
                   >
                     <img 
-                      src="/assets/whatsapp-logo.webp" 
+                      src="./assets/whatsapp-logo.webp" 
                       alt="WhatsApp" 
                       className="w-4 h-4 rounded-full object-cover shrink-0"
                       referrerPolicy="no-referrer"
@@ -226,7 +226,7 @@ export const AgencesView: React.FC<AgencesViewProps> = ({ setActiveTab, onOpenDe
             {/* Guangzhou hub visual */}
             <div className="w-full md:w-72 lg:w-96 relative min-h-[220px]">
               <img 
-                src="/assets/guangzhou-hub.jpg" 
+                src="./assets/guangzhou-hub.jpg" 
                 alt="Hub Emirates Premium Guangzhou Chine" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
